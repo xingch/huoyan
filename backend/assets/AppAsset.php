@@ -13,11 +13,14 @@ class AppAsset extends AssetBundle
     public $baseUrl = '@web';
     public $css = [
         'css/site.css',
+        
     ];
     public $js = [
+        'js/main.js'
     ];
     public $depends = [
-        'yii\web\YiiAsset',
-        'yii\bootstrap\BootstrapAsset',
+        //'yii\web\YiiAsset',
+        'common\assets\CommonAsset'
+        //'yii\bootstrap\BootstrapAsset',
     ];
 }
