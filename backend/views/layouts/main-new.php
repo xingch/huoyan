@@ -22,16 +22,23 @@ AppAsset::register($this);
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
 </head>
-<body>
+<body class="easyui-layout" style="width:100%;">
 <?php $this->beginBody() ?>
 
-<div class="easyui-layout" style="width:100%;height:760px;">
-	<div data-options="region:'north'" style="height:60px">eeeee</div>
-	<div data-options="region:'west',split:true" title="West" style="width:180px;"></div>
-	<div data-options="region:'center',title:'Main Title',iconCls:'icon-ok'">
+	<div data-options="region:'north'" style="height:60px" class="north">
+	   <div class="logo" title="<?= Yii::$app->params['app_name'] ?>"></div>
+	   <div class="menu">
+	   </div>
+	</div>
+	<div data-options="region:'south',split:true" style="height:30px;">
+        <div class="footer">
+            &copy;<?= Yii::$app->params['copyright'] ?>  <?= date('Y') ?></p>
+        </div>
+	</div>
+	<div data-options="region:'west',split:true" title="操作菜单" style="width:180px;"></div>
+	<div data-options="region:'center',title:'',iconCls:'icon-ok'">
         <?= $content ?>
 	</div>
-</div>
 
 <?php $this->endBody() ?>
 
