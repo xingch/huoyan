@@ -2,9 +2,9 @@
 
 namespace backend\controllers;
 
-class BackendController extends \yii\web\Controller
+class ShopController extends \yii\web\Controller
 {
-    public $layout  = 'main-new';
+    public $layout  = 'main';
     
     public function actionIndex()
     {
